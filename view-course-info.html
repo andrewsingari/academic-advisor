@@ -1,16 +1,23 @@
-<table class="schedule-table">
-  <!-- Table header goes here -->
-</table>
-
-<script>
-  window.onload = function () {
-    const scheduleTable = document.querySelector(".schedule-table");
-    const storedSchedule = localStorage.getItem("schedule");
-    if (storedSchedule) {
-      scheduleTable.innerHTML = storedSchedule;
-    } else {
-      scheduleTable.innerHTML =
-        '<tr><td colspan="6">No schedule found. Please create a schedule first.</td></tr>';
-    }
-  };
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Listings</title>
+    <link rel="stylesheet" href="css/courseInfo.css" />
+  </head>
+  <body>
+    <nav class="top-navigation">
+      <img src="img/twu_logo_full.svg" alt="University Logo" class="logo" />
+      <div class="nav-right">
+        <img
+          src="img/profilepic.webp"
+          alt="Profile Picture"
+          class="profile-picture"
+        /><a href="home.html"> Home </a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </nav>
+  </body>
+</html>

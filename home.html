@@ -1,78 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course Listings</title>
-    <link rel="stylesheet" href="css/homeStyle.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/homeStyle.css" />
+  </head>
+  <body>
     <nav class="top-navigation">
-        <img src="img/twu_logo_full.svg" alt="University Logo" class="logo">
-        <div class="nav-right">
-            <img src="img/profilepic.webp" alt="Profile Picture" class="profile-picture">
-            <a href="#">Settings</a>
-            <a href="#">Logout</a>
-        </div>
+      <img src="img/twu_logo_full.svg" alt="University Logo" class="logo" />
+      <div class="nav-right">
+        <img
+          src="img/profilepic.webp"
+          alt="Profile Picture"
+          class="profile-picture"
+        />
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
     </nav>
-    
-    <div class="container">
-        <header>
-            <h1>Course Listings</h1>
-        </header>
 
-        <div class="section">
-            <a href="profile.html">
-                <h2 class="section-title">Profile 👤</h2>
-            </a>
-            <div class="dropdown-content" id="profile-dropdown">
-            </div>
+    <div class="container">
+      <header>
+        <h1>Course Listings</h1>
+      </header>
+
+      <div class="section">
+        <a href="profile.html">
+          <h2 class="section-title">Profile 👤</h2>
+        </a>
+        <div class="dropdown-content" id="profile-dropdown"></div>
+      </div>
+
+      <div class="section">
+        <h2
+          class="section-title"
+          onclick="toggleDropdown('course-info-dropdown')"
+        >
+          Course Information 🎓
+        </h2>
+        <div class="dropdown-content" id="course-info-dropdown">
+          <ul>
+            <li><a href="view-course-info.html">View Courses</a></li>
+            <li><a href="submit-rating.html">Submit Rating</a></li>
+          </ul>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title" onclick="toggleDropdown('course-info-dropdown')">Course Information 🎓</h2>
-            <div class="dropdown-content" id="course-info-dropdown">
-                <ul>
-                    <li><a href="view-course-info.html">View Courses</a></li>
-                    <li><a href="submit-rating.html">Submit Rating</a></li>
-                </ul>
-            </div>
+      </div>
+
+      <div class="section">
+        <h2
+          class="section-title"
+          onclick="toggleDropdown('course-schedule-dropdown')"
+        >
+          Course Schedule 📅
+        </h2>
+        <div class="dropdown-content" id="course-schedule-dropdown">
+          <ul>
+            <li><a href="add-courses.html">Add Courses</a></li>
+          </ul>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title" onclick="toggleDropdown('course-schedule-dropdown')">Course Schedule 📅</h2>
-            <div class="dropdown-content" id="course-schedule-dropdown">
-                <ul>
-                    <li><a href="add-courses.html">Add Courses</a></li>
-                    <li><a href="edit-courses.html">View or Change Schedule</a></li>
-                </ul>
-            </div>
+      </div>
+
+      <div class="section">
+        <h2
+          class="section-title"
+          onclick="toggleDropdown('student-life-dropdown')"
+        >
+          Student Life 🎒
+        </h2>
+        <div class="dropdown-content" id="student-life-dropdown">
+          <ul>
+            <li><a href="housing-info.html">Housing Information</a></li>
+            <li><a href="transport-info.html">Transport Information</a></li>
+            <li><a href="writing-centre.html">Writing Centre</a></li>
+            <li><a href="campus-maps.html">Campus Maps</a></li>
+          </ul>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title" onclick="toggleDropdown('student-life-dropdown')">Student Life 🎒</h2>
-            <div class="dropdown-content" id="student-life-dropdown">
-                <ul>
-                    <li><a href="housing-info.html">Housing Information</a></li>
-                    <li><a href="transport-info.html">Transport Information</a></li>
-                    <li><a href="writing-centre.html">Writing Centre</a></li>
-                </ul>
-            </div>
+      </div>
+
+      <div class="section">
+        <h2
+          class="section-title"
+          onclick="toggleDropdown('credit-progress-dropdown')"
+        >
+          Credit Progress 🚀
+        </h2>
+        <div class="dropdown-content" id="credit-progress-dropdown">
+          <ul>
+            <li><a href="major-checklist.html">Major Checklist</a></li>
+            <li><a href="minor-checklist.html">Minor Checklist</a></li>
+          </ul>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title" onclick="toggleDropdown('credit-progress-dropdown')">Credit Progress 🚀</h2>
-            <div class="dropdown-content" id="credit-progress-dropdown">
-                <ul>
-                    <li><a href="major-checklist.html">Major Checklist</a></li>
-                    <li><a href="minor-checklist.html">Minor Checklist</a></li>
-                    <li><a href="campus-maps.html">Campus Maps</a></li>
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
