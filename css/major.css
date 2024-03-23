@@ -1,20 +1,123 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: Arial, sans-serif;
-  color: #090c55;
-  background-color: #ffffff;
-}
-/* Reset some styles for consistent rendering */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Apply a natural box layout model to all elements */
+html {
+  font-size: 16px; /* Set base font size to 16px */
+}
+section {
+  margin: 0 auto; /* Center the sections */
+  width: 100%; /* Make section take the full width of its container */
+  /* Other styles... */
+}
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  padding-top: 70px; /* Space for fixed navigation bar */
+  line-height: 1.6; /* Default line height for better readability */
+  display: block; /* Set display to flex */
+  justify-content: center; /* Center children horizontally */
+  align-items: flex-start; /* Align children to the start of the cross axis */
+  min-height: 100vh; /* Minimum height of 100% of the viewport height */
+}
+/* You might also want to center the 'Total Semester Hours' paragraph */
+p {
+  text-align: center; /* Center align the text within the paragraph */
+}
+
+/* Main container for the content to center it on the page */
+.container {
+  width: 100%; /* Full width of the viewport */
+  margin: 0 auto; /* Auto margins for horizontal centering */
+  padding: 2rem; /* Padding around the content */
+}
+
+/* Section styles for proper spacing and readability */
+section {
+  width: 100%; /* Each section will take up half of the container's width */
+  margin: 0 auto 2rem; /* Center each section and add bottom margin */
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for tables */
+table {
+  width: 100%; /* Full width of the container */
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+/* Style for table headers */
+th {
+  background-color: #eec78e;
+  color: #090c55;
+  padding: 0.75rem;
+}
+.container {
+  width: 50vw; /* Use viewport width (vw) units */
+  margin: 0 auto; /* Auto margins for horizontal centering */
+  padding: 2rem; /* Padding around the content */
+}
+
+/* Style for table data cells */
+td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="number"] {
+  /* You can add max-width if the fields are too wide */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+  width: 100%; /* Use the full width available */
+  padding: 0.5rem;
+  margin-top: 0.25rem; /* Margin top for spacing from the label */
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* Hover effect for table rows for better user experience */
+tr:not(:first-child):hover {
+  background-color: #f8f8f8;
+}
+
+/* Style for section headings */
+h2 {
+  color: #090c55;
+  margin-bottom: 1rem; /* Spacing below the heading */
+  font-size: 1.25rem; /* Slightly larger font size for headings */
+}
+
+/* Total semester hours display styling */
+.total-semester-hours {
+  font-weight: bold;
+  color: #090c55;
+  display: block; /* Display as block for new line */
+  margin-top: 1rem; /* Spacing above the total hours */
+}
+
+/* Button styles for actions */
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #eec78e;
+  color: #090c55;
+  cursor: pointer;
+  font-size: 1rem; /* 16px */
+  margin-right: 0.5rem; /* Spacing between buttons */
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
 .top-navigation {
   background-color: #090c55;
   color: #ffffff;
