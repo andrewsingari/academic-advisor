@@ -64,7 +64,23 @@ th {
   margin: 0 auto; /* Auto margins for horizontal centering */
   padding: 2rem; /* Padding around the content */
 }
-
+h4 {
+  padding: 20px;
+  color: #090c55; /* Dark blue for contrast and consistency */
+  background-color: transparent; /* No background for a title */
+  padding: 0; /* No padding needed for a title */
+  margin-top: 12px; /* No extra space needed on top for a title */
+  margin-bottom: 32px; /* More space at the bottom to separate from content */
+  text-align: left; /* Align to the left for a title */
+  border-radius: 0; /* No border radius for a title */
+  box-shadow: none; /* No box shadow for a title */
+  display: block; /* Let it take the full width */
+  width: 100%; /* Full width */
+  font-size: 2.5em; /* Much larger font size */
+  font-weight: bold; /* Make it bold */
+  line-height: 1.2; /* Tighter line spacing */
+  border-bottom: 2px solid #eec78e; /* A solid underline for distinction */
+}
 /* Style for table data cells */
 td {
   border: 1px solid #ddd;
