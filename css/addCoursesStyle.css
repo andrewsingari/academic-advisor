@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Reset some styles for consistent rendering */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-navigation {
+  background-color: #090c55;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures the navbar is above other content */
+}
+
+.top-navigation .logo {
+  height: 50px; /* Adjust as per your logo's aspect ratio */
+}
+
+.top-navigation .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.top-navigation .profile-picture {
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.top-navigation a {
+  color: #ffffff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.top-navigation a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.schedule-table th {
+  background-color: #eec78e;
+}
+
+.schedule-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+select,
+button {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+input[type="text"]:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #090c55;
+}
+
+button {
+  background-color: #eec78e;
+  color: #090c55;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label {
+  color: #090c55;
+}

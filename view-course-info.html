@@ -1,0 +1,16 @@
+<table class="schedule-table">
+  <!-- Table header goes here -->
+</table>
+
+<script>
+  window.onload = function () {
+    const scheduleTable = document.querySelector(".schedule-table");
+    const storedSchedule = localStorage.getItem("schedule");
+    if (storedSchedule) {
+      scheduleTable.innerHTML = storedSchedule;
+    } else {
+      scheduleTable.innerHTML =
+        '<tr><td colspan="6">No schedule found. Please create a schedule first.</td></tr>';
+    }
+  };
+</script>
