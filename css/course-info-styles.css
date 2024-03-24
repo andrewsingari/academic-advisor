@@ -1,112 +1,152 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.top-navigation {
+  background-color: #090c55;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures the navbar is above other content */
+}
+
+.top-navigation .logo {
+  height: 50px; /* Adjust as per your logo's aspect ratio */
+}
+
+.top-navigation .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.top-navigation .profile-picture {
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.top-navigation a {
+  color: #ffffff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.top-navigation a:hover {
+  text-decoration: underline;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #EEC78E;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
 .search-container {
-    padding: 1rem;
-    background-color: #FFA500;
-    color: #090C55;
-    text-align: center;
-    margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #090c55;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eec78e;
 }
 
 #level-filter {
-    padding: 0.5rem;
-    margin: 0 0.5rem;
-    border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
 }
 
 label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .option-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: #090C55;
-    border-radius: 50%;
-    margin-left: 5px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #090c55;
+  border-radius: 50%;
+  margin-left: 5px;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .course-card {
-    background-color: #c7d7f3;
-    color: #EEC78E;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s;
+  background-color: #f9f9f9;
+  color: #eec78e;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 0.5px solid #090c55;
 }
 
 .course-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .course-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #1E90FF; /* Light blue color for course title */
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #1e90ff; /* Light blue color for course title */
 }
 
 .course-number {
-    margin-bottom: 0.25rem;
-    font-weight: bold;
-    color: #008000; /* Dark green color for course number */
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: #008000; /* Dark green color for course number */
 }
 
 .section {
-    margin-bottom: 0.25rem;
-    padding-left: 0.5rem;
-    border-left: 3px solid #FFD700;
-    font-style: italic;
-    color: #663399; /* Dark purple color for section */
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #ffd700;
+  font-style: italic;
+  color: #663399; /* Dark purple color for section */
 }
 
 .credits {
-    margin-bottom: 0.25rem;
-    padding-left: 0.5rem;
-    border-left: 3px solid #FF6347;
-    font-style: italic;
-    color: #FF6347; /* Tomato color for credits */
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #ff6347;
+  font-style: italic;
+  color: #ff6347; /* Tomato color for credits */
 }
 
 .prerequisites {
-    margin-bottom: 0.25rem;
-    padding-left: 0.5rem;
-    border-left: 3px solid #FF69B4;
-    font-weight: bold;
-    color: #FF69B4; /* Hot pink color for prerequisites */
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #ff69b4;
+  font-weight: bold;
+  color: #ff69b4; /* Hot pink color for prerequisites */
 }
 
 .campus {
-    margin-bottom: 0.25rem;
-    padding-left: 0.5rem;
-    border-left: 3px solid #20B2AA;
-    font-weight: bold;
-    color: #20B2AA; /* Light sea green color for campus */
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #20b2aa;
+  font-weight: bold;
+  color: #20b2aa; /* Light sea green color for campus */
 }
 
 .dates {
-    font-size: 0.9rem;
-    color: #696969; /* Dim gray color for dates */
+  font-size: 0.9rem;
+  color: #696969; /* Dim gray color for dates */
 }
 
 .course-number,
 .section {
-    color: #FFA500; /* Orange color for course number and section */
+  color: #ffa500; /* Orange color for course number and section */
 }
