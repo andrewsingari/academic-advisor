@@ -86,7 +86,7 @@ label {
   background-color: #f9f9f9;
   color: #eec78e;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 2rem;
   cursor: pointer;
   transition: transform 0.2s;
   border: 0.5px solid #090c55;
@@ -100,13 +100,13 @@ label {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: #1e90ff; /* Light blue color for course title */
+  color: #090c55; /* Light blue color for course title */
 }
 
 .course-number {
   margin-bottom: 0.25rem;
   font-weight: bold;
-  color: #008000; /* Dark green color for course number */
+  color: #eec78e; /* Dark green color for course number */
 }
 
 .section {
@@ -120,25 +120,25 @@ label {
 .credits {
   margin-bottom: 0.25rem;
   padding-left: 0.5rem;
-  border-left: 3px solid #ff6347;
+  border-left: 3px solid #090c55;
   font-style: italic;
-  color: #ff6347; /* Tomato color for credits */
+  color: #090c55; /* Tomato color for credits */
 }
 
 .prerequisites {
   margin-bottom: 0.25rem;
   padding-left: 0.5rem;
-  border-left: 3px solid #ff69b4;
+  border-left: 3px solid #090c55;
   font-weight: bold;
-  color: #ff69b4; /* Hot pink color for prerequisites */
+  color: #090c55; /* Hot pink color for prerequisites */
 }
 
 .campus {
   margin-bottom: 0.25rem;
   padding-left: 0.5rem;
-  border-left: 3px solid #20b2aa;
+  border-left: 3px solid #090c55;
   font-weight: bold;
-  color: #20b2aa; /* Light sea green color for campus */
+  color: #090c55; /* Light sea green color for campus */
 }
 
 .dates {
