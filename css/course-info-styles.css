@@ -3,21 +3,30 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6; /* Improves readability */
+  padding-top: 60px; /* Ensures content is not hidden behind the fixed navbar */
+}
+
 .top-navigation {
   background-color: #090c55;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Fix the navbar at the top */
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensures the navbar is above other content */
+  z-index: 1000;
 }
 
 .top-navigation .logo {
-  height: 50px; /* Adjust as per your logo's aspect ratio */
+  height: 60px;
 }
 
 .top-navigation .nav-right {
@@ -26,25 +35,20 @@
 }
 
 .top-navigation .profile-picture {
-  height: 40px;
+  height: 50px;
   border-radius: 50%;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 .top-navigation a {
   color: #ffffff;
-  margin-left: 15px;
+  margin-left: 1rem;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .top-navigation a:hover {
   text-decoration: underline;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
 }
 
 .search-container {
@@ -53,100 +57,83 @@ body {
   color: #090c55;
   text-align: center;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #eec78e;
+  border-bottom: 4px solid #eec78e;
 }
 
 #level-filter {
   padding: 0.5rem;
-  margin: 0 0.5rem;
+  margin-left: 0.5rem;
   border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
 label {
   font-weight: bold;
-}
-
-.option-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #090c55;
-  border-radius: 50%;
-  margin-left: 5px;
+  margin-right: 0.5rem;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .course-card {
-  background-color: #f9f9f9;
-  color: #eec78e;
-  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #090c55;
+  border-radius: 10px;
   padding: 2rem;
   cursor: pointer;
-  transition: transform 0.2s;
-  border: 0.5px solid #090c55;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .course-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .course-title {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: bold;
-  color: #090c55; /* Light blue color for course title */
+  color: #090c55;
+}
+
+.course-number,
+.section,
+.credits,
+.prerequisites,
+.campus {
+  color: #666;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #eec78e;
+  font-size: 1rem;
 }
 
 .course-number {
-  margin-bottom: 0.25rem;
   font-weight: bold;
-  color: #eec78e; /* Dark green color for course number */
-}
-
-.section {
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  border-left: 3px solid #ffd700;
-  font-style: italic;
-  color: #663399; /* Dark purple color for section */
-}
-
-.credits {
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  border-left: 3px solid #090c55;
-  font-style: italic;
-  color: #090c55; /* Tomato color for credits */
-}
-
-.prerequisites {
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  border-left: 3px solid #090c55;
-  font-weight: bold;
-  color: #090c55; /* Hot pink color for prerequisites */
-}
-
-.campus {
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  border-left: 3px solid #090c55;
-  font-weight: bold;
-  color: #090c55; /* Light sea green color for campus */
 }
 
 .dates {
   font-size: 0.9rem;
-  color: #696969; /* Dim gray color for dates */
+  color: #696969;
 }
 
-.course-number,
-.section {
-  color: #ffa500; /* Orange color for course number and section */
+@media screen and (max-width: 768px) {
+  .top-navigation .nav-right {
+    display: none; /* Simplify the navbar on smaller screens */
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    padding: 1rem;
+  }
+
+  .course-card {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
 }
