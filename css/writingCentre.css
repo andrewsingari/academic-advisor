@@ -22,8 +22,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  position: fixed; /* Fix the navbar at the top */
+  width: 100%; /* Fix the navbar at the top */
   top: 0;
   left: 0;
   z-index: 1000; /* Ensures the navbar is above other content */
@@ -53,4 +52,89 @@ html {
 
 .top-navigation a:hover {
   text-decoration: underline;
+}
+
+/* Incorporating colors and design cues from the conversation */
+body {
+  font-family: Arial, sans-serif;
+  color: #090c55; /* Primary text color */
+  background-color: #f9f9f9; /* Background color */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #090c55; /* Title color */
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid #eec78e; /* Accent color for underline */
+  margin-bottom: 2rem;
+}
+
+main .welcome p,
+main .services h2,
+main .appointment h2 {
+  padding: 0.5rem 0;
+}
+
+.services,
+.appointment {
+  border-top: 2px solid #090c55;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-item:hover {
+  background-color: #eec78e; /* Accent color for item hover */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #090c55; /* Footer background */
+  color: #eec78e; /* Footer text color */
+  margin-top: 2rem;
+  border-radius: 0 0 8px 8px; /* Match container border-radius */
+}
+.welcome-section {
+  background-color: #f8f8f8; /* A light background to make the section stand out */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  border-left: 4px solid #090c55; /* A colored bar on the left for visual interest */
+  margin: 1rem 0; /* Add some top and bottom margin for spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+}
+
+.welcome-section h2 {
+  color: #090c55; /* Color for the section heading */
+  margin-bottom: 0.5rem; /* Space after the heading */
+  font-size: 1.8rem; /* Larger font size for the heading */
+}
+
+.welcome-section p {
+  color: #333; /* Darker color for readability */
+  font-size: 1rem; /* A comfortable font size for reading */
+  line-height: 1.6; /* Line height for better readability */
+  margin-bottom: 1rem; /* Space between paragraphs */
 }
