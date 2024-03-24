@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EEC78E;
+}
+
+.search-container {
+    padding: 1rem;
+    background-color: #FFA500;
+    color: #090C55;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#level-filter {
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.option-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #090C55;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.course-card {
+    background-color: #c7d7f3;
+    color: #EEC78E;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #1E90FF; /* Light blue color for course title */
+}
+
+.course-number {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: #008000; /* Dark green color for course number */
+}
+
+.section {
+    margin-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #FFD700;
+    font-style: italic;
+    color: #663399; /* Dark purple color for section */
+}
+
+.credits {
+    margin-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #FF6347;
+    font-style: italic;
+    color: #FF6347; /* Tomato color for credits */
+}
+
+.prerequisites {
+    margin-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #FF69B4;
+    font-weight: bold;
+    color: #FF69B4; /* Hot pink color for prerequisites */
+}
+
+.campus {
+    margin-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #20B2AA;
+    font-weight: bold;
+    color: #20B2AA; /* Light sea green color for campus */
+}
+
+.dates {
+    font-size: 0.9rem;
+    color: #696969; /* Dim gray color for dates */
+}
+
+.course-number,
+.section {
+    color: #FFA500; /* Orange color for course number and section */
+}
