@@ -1,4 +1,5 @@
-body, html {
+body, 
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -79,18 +80,11 @@ body {
   content: attr(data-hover-content); /* Display the hover content from the data attribute */
   position: absolute; /* Position the details absolutely */
   top: 100%; /* Position below the button */
-  left: 0%; /* Center horizontally */
+  left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
   background-color: rgba(0, 0, 0, 0.8); /* Background color for details */
   color: #ffffff; /* Text color for details */
-  padding: 50px 100px; /* Padding for details */
-  border-radius: 10px; /* Border radius for details */
-  font-size: 16px; /* Font size for details */
-  white-space: nowrap;
-  display: none;
-}
-
-/* Show button details on hover */
-.background-button:hover::after {
-  display: block; /* Show details on hover */
+  padding: 0px 0px; /* Padding for details */
+  border-radius: 5px; /* Border radius for details */
+  font-size: 14px; /* Font size for details */
 }
