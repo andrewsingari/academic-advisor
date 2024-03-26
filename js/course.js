@@ -82,4 +82,5 @@ function fetchCourses() {
     .catch(error => console.error("Error:", error));
 }
 
+
 document.addEventListener("DOMContentLoaded", fetchCourses);
