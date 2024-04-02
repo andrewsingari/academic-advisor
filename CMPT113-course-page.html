@@ -1,1 +1,27 @@
-<h1> Hello </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Reviews: CMPT113 Computational Thinking and Information Systems</title>
+    <link rel="stylesheet" href="css/113-style.css">
+</head>
+  <body>
+    <nav class="top-navigation">
+      <img src="img/twu_logo_full.svg" alt="University Logo" class="logo" />
+      <div class="nav-right">
+        <a href="home.html"> Home </a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </nav>
+    <div id="reviewForm">
+        <h2>Add a Review for CMPT113 Computational Thinking and Information Systems</h2>
+        <textarea id="reviewText" placeholder="Your Review"></textarea>
+        <button onclick="addReview()">Submit Review</button>
+    </div>
+    <div id="reviews">
+        <h2>Reviews for CMPT113</h2>
+    </div>
+    <script src="js/113-script.js"></script>
+</body>
+</html>
