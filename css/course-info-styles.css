@@ -10,6 +10,26 @@ body {
   line-height: 1.6; /* Improves readability */
   padding-top: 60px; /* Ensures content is not hidden behind the fixed navbar */
 }
+button {
+  padding: 10px 20px;
+  background-color: #090c55; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners for modern feel */
+  cursor: pointer; /* Cursor indicates clickable button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+}
+
+button:hover {
+  background-color: #eec78e; /* Light brown accent color for hover */
+  transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
+button:active {
+  transform: translateY(1px); /* Slight press effect on active/click */
+}
 
 .top-navigation {
   background-color: #090c55;
@@ -66,7 +86,9 @@ body {
   border-radius: 5px;
   border: 1px solid #ddd;
 }
-
+h2 {
+  padding-top: 20px;
+}
 label {
   font-weight: bold;
   margin-right: 0.5rem;

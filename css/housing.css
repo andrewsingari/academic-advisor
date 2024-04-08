@@ -1,33 +1,35 @@
+/* General Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-}
-/* Reset some styles for consistent rendering */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #090c55;
+  font-size: 16px;
 }
 
+/* Top Navigation */
 .top-navigation {
   background-color: #090c55;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 0.5em 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  position: fixed; /* Fix the navbar at the top */
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensures the navbar is above other content */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .top-navigation .logo {
-  height: 50px; /* Adjust as per your logo's aspect ratio */
+  height: 60px;
 }
 
 .top-navigation .nav-right {
@@ -45,9 +47,87 @@ html {
   color: #ffffff;
   margin-left: 15px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 .top-navigation a:hover {
-  text-decoration: underline;
+  color: #eec78e;
+}
+
+/* Main Header */
+h1 {
+  color: #090c55;
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px; /* Push down below fixed navbar */
+  font-size: 2.5em;
+}
+
+/* Form Styles */
+#listingForm {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#listingForm input[type="text"] {
+  width: calc(33% - 10px);
+  margin-right: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+#listingForm button {
+  padding: 10px 20px;
+  background-color: #eec78e;
+  color: #090c55;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#listingForm button:hover {
+  background-color: #dda658;
+}
+
+/* Listings Container */
+#listingsContainer {
+  width: 80%;
+  margin: 20px auto;
+}
+
+#listingsContainer div {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+#listingsContainer h2 {
+  color: #090c55;
+  margin-bottom: 5px;
+}
+
+#listingsContainer p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Clear floats after the listings */
+#listingsContainer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Add some breathing room at the bottom */
+body {
+  padding-bottom: 60px;
 }

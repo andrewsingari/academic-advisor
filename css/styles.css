@@ -1,97 +1,98 @@
-body, h1, h2 {
-    margin: 0;
-    padding: 1px;
-    font-family: 'Arial', sans-serif;
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 1px;
+  font-family: "Arial", sans-serif;
 }
 
 .app {
-    text-align: center;
-    color: #fff;
-    position: relative;
-    height: 100vh;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  height: 100vh;
 }
 
 #background-video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
 .login {
-    position: relative;
-    height: 100vh;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-content {
-    z-index: 1;
-    padding: 48px;
-    background: rgba(0, 51, 102, 0.85);
-    border-radius: 10px;
-    max-width: 500px; 
-    width: 100%; 
+  z-index: 1;
+  padding: 48px;
+  background: rgba(0, 51, 102, 0.85);
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 input[type="email"],
 input[type="password"] {
-    width: 100%; 
-    padding: 10px; 
-    margin: 8px 0; 
-    display: inline-block; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    background-color: #f8f8f8; 
-    font-size: 16px; 
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  font-size: 16px;
 }
 
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #004488; 
-    outline: none; 
-    background-color: #eef; 
+  border-color: #004488;
+  outline: none;
+  background-color: #eef;
 }
 
 button {
-    background-color: #ccb400; 
-    color: #003366; 
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 4px; 
-    font-size: 16px; 
+  background-color: #ccb400;
+  color: #003366;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 button:hover {
-    background-color: #bba400; 
+  background-color: #bba400;
 }
 
 @media (max-width: 768px) {
-    .login-content {
-        width: 90%;
-        padding: 48px; 
-    }
+  .login-content {
+    width: 90%;
+    padding: 48px;
+  }
 
-    #background-video {
-        min-width: 100%;
-        min-height: 100%;
-    }
+  #background-video {
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 
 .university-logo {
-    max-width: 350px; 
-    margin: 0 auto 50px; 
-    display: block; 
+  max-width: 350px;
+  margin: 0 auto 50px;
+  display: block;
 }
-

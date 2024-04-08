@@ -1,3 +1,11 @@
+/* General resets and base styles */
+body,
+html {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9; /* Slightly off-white background for easier reading */
+  color: #090c55; /* Keeping the primary text color */
+  height: 100%;
+}
 body,
 html {
   margin: 0;
@@ -22,7 +30,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Fix the navbar at the top */
+  width: 100%;
+  position: fixed; /* Fix the navbar at the top */
   top: 0;
   left: 0;
   z-index: 1000; /* Ensures the navbar is above other content */
@@ -54,87 +63,87 @@ html {
   text-decoration: underline;
 }
 
-/* Incorporating colors and design cues from the conversation */
-body {
-  font-family: Arial, sans-serif;
-  color: #090c55; /* Primary text color */
-  background-color: #f9f9f9; /* Background color */
-  margin: 0;
-  padding: 0;
-}
+/* Navigation stays the same as per your request */
 
+/* Main content container */
 .container {
   max-width: 960px;
-  margin: 2rem auto;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 70px auto 2rem auto; /* More margin on the top to push content down from the navbar */
+  background-color: #ffffff; /* Pure white for the background */
+  padding: 2rem; /* Increased padding for a more spacious layout */
+  border-radius: 10px; /* Rounded corners for a modern card-like look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header h1 {
   color: #090c55; /* Title color */
   text-align: center;
-  padding-bottom: 1rem;
-  border-bottom: 4px solid #eec78e; /* Accent color for underline */
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Extra space below the header */
+  padding-bottom: 0.5rem; /* Less padding at the bottom */
+  border-bottom: 3px solid #eec78e; /* Accent color for header underline */
 }
 
-main .welcome p,
-main .services h2,
-main .appointment h2 {
-  padding: 0.5rem 0;
-}
-
-.services,
-.appointment {
-  border-top: 2px solid #090c55;
-  padding-top: 1rem;
-  margin-top: 1rem;
-}
-
-.service-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f8f8;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.service-item:hover {
-  background-color: #eec78e; /* Accent color for item hover */
-}
-
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background-color: #090c55; /* Footer background */
-  color: #eec78e; /* Footer text color */
-  margin-top: 2rem;
-  border-radius: 0 0 8px 8px; /* Match container border-radius */
-}
+/* Welcome section */
 .welcome-section {
-  background-color: #f8f8f8; /* A light background to make the section stand out */
-  padding: 20px;
-  border-radius: 8px; /* Rounded corners for a modern look */
-  border-left: 4px solid #090c55; /* A colored bar on the left for visual interest */
-  margin: 1rem 0; /* Add some top and bottom margin for spacing */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+  background-color: #f9f9f9; /* A slightly different shade from the body for contrast */
+  padding: 1.5rem; /* Spacious padding for content */
+  border-radius: 8px; /* Consistent rounded corners */
+  border-left: 5px solid #090c55; /* Bold left border for visual interest */
+  margin-bottom: 2rem; /* More space between sections */
+  box-shadow: none; /* Removing the box-shadow for a flatter design */
 }
 
 .welcome-section h2 {
-  color: #090c55; /* Color for the section heading */
-  margin-bottom: 0.5rem; /* Space after the heading */
-  font-size: 1.8rem; /* Larger font size for the heading */
+  margin-bottom: 1rem; /* More space after the heading */
+  font-size: 2rem; /* Bigger font-size for the heading */
 }
 
 .welcome-section p {
-  color: #333; /* Darker color for readability */
-  font-size: 1rem; /* A comfortable font size for reading */
-  line-height: 1.6; /* Line height for better readability */
-  margin-bottom: 1rem; /* Space between paragraphs */
+  color: #333; /* Darker color for paragraph for better readability */
+  line-height: 1.8; /* Increased line height for readability */
+}
+
+/* Services and Appointment Sections */
+.services,
+.appointment {
+  border-top: none; /* Removing the top border */
+  padding-top: 0; /* Removing extra padding at the top */
+}
+
+/* Service Items */
+.service-item {
+  display: block; /* Each service item takes the full width */
+  background-color: #ffffff; /* White background for the service items */
+  margin: 0.5rem 0; /* Slightly reduced margin for a tighter layout */
+  padding: 1.5rem; /* More padding for a card-like appearance */
+  border: 1px solid #ddd; /* Border for definition */
+  border-radius: 8px; /* Rounded corners for the service items */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.service-item:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.service-item span:last-child {
+  float: right; /* Align the arrow to the right */
+  color: #090c55; /* Using the primary color for the arrow */
+}
+
+/* Footer */
+footer {
+  background-color: #090c55; /* Dark blue background for footer */
+  color: #ffffff; /* White text for contrast */
+  padding: 1rem 0; /* Padding around the text */
+  text-align: center; /* Centering the text */
+  border-radius: 0; /* Removing the border-radius */
+  position: relative; /* Ensuring the footer is at the bottom */
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0; /* Resetting the margin */
+  color: #eec78e; /* Accent color for the footer text */
 }
