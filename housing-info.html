@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course Listings</title>
-    <link rel="stylesheet" href="css/housing.css" />
-  </head>
-  <body>
-    <nav class="top-navigation">
-      <img src="img/twu_logo_full.svg" alt="University Logo" class="logo" />
-      <div class="nav-right">
-        <img
-          src="img/profilepic.webp"
-          alt="Profile Picture"
-          class="profile-picture"
-        /><a href="home.html"> Home </a>
-        <a href="#">Settings</a>
-        <a href="#">Logout</a>
-      </div>
-    </nav>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Housing Listings</title>
+</head>
+<body>
+    <h1>Housing Listings</h1>
+    <form id="listingForm" method="post" enctype="multipart/form-data">
+        <input type="text" id="title" name="title" placeholder="Title" required>
+        <input type="text" id="price" name="price" placeholder="Price" required>
+        <input type="text" id="address" name="address" placeholder="Address" required>
+        <input type="text" id="location" name="location" placeholder="Location" required>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <button type="submit">Add Listing</button>
+    </form>
+    <div id="listingsContainer"></div>
+
+    <script src="js/housing.js"></script>
+</body>
 </html>
