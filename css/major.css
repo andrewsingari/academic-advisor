@@ -86,6 +86,7 @@ td {
   border: 1px solid #ddd;
   padding: 0.5rem;
   text-align: left;
+  font-size: medium;
 }
 
 input[type="text"],
@@ -97,6 +98,7 @@ input[type="number"] {
   margin-top: 0.25rem; /* Margin top for spacing from the label */
   border: 1px solid #ccc;
   border-radius: 0.25rem;
+  font-size: medium;
 }
 
 /* Hover effect for table rows for better user experience */
