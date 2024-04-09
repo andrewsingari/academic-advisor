@@ -11,7 +11,7 @@ function saveSection(section) {
             if (data.status === 'success') {
                 console.log(`${section} saved successfully`);
                 alert('Courses saved successfully');
-                location.reload(); // Refresh the page to show the updated data
+                location.reload(); 
             } else {
                 console.error('Error saving courses');
                 alert('Error saving courses');
@@ -81,6 +81,31 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchAndDisplayTotalHours(section); 
     });
 });
+
+function fetchAndDisplayTotalHoursForAllSections() {
+    fetch('getTotalHours.php?section=all')
+        .then(response => response.json())
+        .then(data => {
+            const totalHoursElement = document.getElementById('all-sections-total-hours');
+            if (totalHoursElement) {
+                totalHoursElement.textContent = data.totalSemesterHours;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = ['core', 'required', 'ancillary', 'elective'];
+    sections.forEach(section => {
+        fetchSectionData(section);
+        fetchAndDisplayTotalHours(section); 
+    });
+    fetchAndDisplayTotalHoursForAllSections();
+});
+
 
 
 function resetSection(section) {
