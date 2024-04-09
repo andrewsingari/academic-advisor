@@ -1,4 +1,3 @@
-// form submission for each section
 function saveSection(section) {
     const form = document.getElementById(`${section}-form`);
     if (form) {
@@ -78,8 +77,31 @@ function fetchAndDisplayTotalHours(section) {
 document.addEventListener('DOMContentLoaded', () => {
     const sections = ['core', 'required', 'ancillary', 'elective'];
     sections.forEach(section => {
-        fetchSectionData(section);  data
-        fetchAndDisplayTotalHours(section); // fetch and display total hours
+        fetchSectionData(section);
+        fetchAndDisplayTotalHours(section); 
     });
 });
+
+
+function resetSection(section) {
+    if (confirm(`Are you sure you want to reset all ${section} courses?`)) {
+        fetch(`deleteChecklist.php?section=${section}`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                console.log(`${section} reset successfully`);
+                alert('Courses reset successfully');
+                location.reload(); 
+            } else {
+                console.error('Error resetting courses');
+                alert('Error resetting courses');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+}
 
