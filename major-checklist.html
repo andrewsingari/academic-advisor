@@ -8,9 +8,7 @@
   </head>
   <body>
     <nav class="top-navigation">
-      <a href="home.html"
-        ><img src="img/twu_logo_full.svg" alt="University Logo" class="logo"
-      /></a>
+      <img src="img/twu_logo_full.svg" alt="University Logo" class="logo" />
       <div class="nav-right">
         <a href="home.html"> Home </a>
         <a href="#">Settings</a>
@@ -19,6 +17,7 @@
     </nav>
     <div class="container">
       <h4 class="course-schedule-heading">Major Checklist</h4>
+      <form id="core-form" onsubmit="saveSection('core'); return false;">
       <section>
         <h2>Section 1: Core Requirements</h2>
         <table id="core-requirements">
@@ -29,318 +28,340 @@
             <th>Semester Hours</th>
           </tr>
           <!-- Repeat this tr structure for each row as needed -->
+          <tbody class="input-rows">
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="academic research and writing"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="academic research and writing"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="foundations"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="foundations"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="foundations"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="logical and ethical reasoning"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="religious and spiritual thought"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="religious and spiritual thought"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="religious and spiritual thought"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="scientific method and lab research"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="aesthetic and performance inquiry"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="cultural and linguistic inquiry"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="experiential and embodied inquiry"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="historical and archival inquiry"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="quantitative and computational inquiry"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="social and global inquiry"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
-          </tr>
+            </tr>
+          </tbody>
         </table>
+        <input type="hidden" name="section" value="core" />
         <p>Total Semester Hours: <span id="core-total-hours">0</span></p>
+        <button type="submit" class="save-button">Save Core Courses</button>
       </section>
+      </form>
     </div>
     <div class="container">
+        <form id="required-form" onsubmit="saveSection('required'); return false;">
       <section>
         <h2>Section 2: Required Courses</h2>
-        <table id="required-courses">
+        <table id="required-requirements">
           <!-- Table headers -->
           <tr>
             <th>Course Name</th>
@@ -348,300 +369,320 @@
             <th>Semester Hours</th>
           </tr>
           <!-- Repeat this tr structure for each row as needed -->
+          <tbody class="input-rows">
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="required major courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <!-- ... additional rows ... -->
+          </tbody>
         </table>
+        <input type="hidden" name="section" value="required" />
         <p>Total Semester Hours: <span id="required-total-hours">0</span></p>
+        <button type="submit" class="save-button">Save Required Courses</button>
       </section>
+    </form>
     </div>
     <div class="container">
+    <form id="ancillary-form" onsubmit="saveSection('ancillary'); return false;">
       <section>
         <h2>Section 3: Ancillary Requirements</h2>
-        <table id="ancilliary-requirements">
+        <table id="ancillary-requirements">
           <!-- Table headers -->
           <tr>
             <th>Course Name</th>
@@ -649,148 +690,161 @@
             <th>Semester Hours</th>
           </tr>
           <!-- Repeat this tr structure for each row as needed -->
+          <tbody class="input-rows">
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="ancillary courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="ancillary courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="ancillary courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="ancillary courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="ancillary courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="ancillary courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="ancillary courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
+          </tbody>
           <!-- ... additional rows ... -->
         </table>
+        <input type="hidden" name="section" value="ancillary" />
         <p>Total Semester Hours: <span id="ancilliary-total-hours">0</span></p>
+        <button type="submit" class="save-button">Save Ancillary Courses</button>
       </section>
+     </form>
     </div>
     <div class="container">
+    <form id="elective-form" onsubmit="saveSection('elective'); return false;">
       <section>
         <h2>Section 4: Elective Courses</h2>
-        <table id="elective-courses">
+        <table id="elective-requirements">
           <!-- Table headers -->
           <tr>
             <th>Course Name</th>
@@ -798,180 +852,194 @@
             <th>Semester Hours</th>
           </tr>
           <!-- Repeat this tr structure for each row as needed -->
+          <tbody class="input-rows">
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <input type="text" placeholder="course name" name="course_name" />
+              <input type="text" placeholder="course name" name="course_name[]" />
             </td>
             <td>
               <input
                 type="text"
                 placeholder="elective courses"
-                name="course_description"
+                name="course_description[]"
               />
             </td>
             <td>
               <input
                 type="number"
                 placeholder="s.h"
-                class="semester-hours-input"
+                name="semester_hours[]"
+                class="semester-hours-input[]"
               />
             </td>
           </tr>
+          </tbody>
         </table>
+        <input type="hidden" name="section" value="elective" />
         <p>Total Semester Hours: <span id="elective-total-hours">0</span></p>
+        <button type="submit" class="save-button">Save Elective Courses</button>
       </section>
+      </form>
     </div>
 
     <div class="container">

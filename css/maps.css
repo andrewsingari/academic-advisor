@@ -1,27 +1,48 @@
-body, 
+body,
 html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-}
-
-body {
   font-family: Arial, sans-serif;
-  color: #090c55;
-  background-color: #ffffff;
-  background-image: url('../img/map.png'); /* Corrected path to the background image */
-  background-size: contain; /* Adjust as needed 1238px 629px*/
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat;
+  background-color: #f9f9f9; /* Light gray background */
 }
 
-/* Reset some styles for consistent rendering */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Navigation stays unchanged */
+
+/* Map iframe styles */
+iframe {
+  width: 100%;
+  height: calc(100% - 50px); /* Full height minus navigation bar height */
+  border: none; /* No border for iframe */
+  position: absolute;
+  top: 50px; /* Positioning below the navigation bar */
+  left: 0;
 }
+
+/* If there's a button or additional content you want to style, you can add those styles here.
+For example, if there's a button to 'View Larger Map', it can be styled as follows: */
+
+.button-view-larger {
+  position: absolute; /* Position the button on top of the map */
+  top: 60px; /* Below the navbar */
+  right: 20px; /* Some padding from the right */
+  padding: 10px 20px;
+  background-color: #090c55; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  z-index: 1010; /* Above the map */
+  transition: background-color 0.3s;
+}
+
+.button-view-larger:hover {
+  background-color: #eec78e; /* Accent color on hover */
+}
+
+/* Ensure this class is added to your 'View Larger Map' button */
 
 .top-navigation {
   background-color: #090c55;
@@ -77,7 +98,9 @@ body {
 
 /* Additional styles for button details */
 .background-button::after {
-  content: attr(data-hover-content); /* Display the hover content from the data attribute */
+  content: attr(
+    data-hover-content
+  ); /* Display the hover content from the data attribute */
   position: absolute; /* Position the details absolutely */
   top: 100%; /* Position below the button */
   left: 50%; /* Center horizontally */
