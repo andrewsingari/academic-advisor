@@ -1,69 +1,85 @@
-// Function to update total hours for all sections
-function updateTotalHours() {
-  const coreTotal = calculateTotalHours("core-requirements");
-  document.getElementById("core-total-hours").textContent = coreTotal;
-
-  // Do the same for other sections and then add them up
-  // ...
-
-  const allSectionsTotal = coreTotal;
-  document.getElementById("all-sections-total-hours").textContent =
-    allSectionsTotal;
+// form submission for each section
+function saveSection(section) {
+    const form = document.getElementById(`${section}-form`);
+    if (form) {
+        const formData = new FormData(form);
+        fetch('addChecklist.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                console.log(`${section} saved successfully`);
+                alert('Courses saved successfully');
+                location.reload(); // Refresh the page to show the updated data
+            } else {
+                console.error('Error saving courses');
+                alert('Error saving courses');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    } else {
+        console.error(`Form with ID ${section}-form not found`);
+    }
 }
 
-// Bind the updateTotalHours function to input events on hour inputs
-window.onload = function () {
-  const hourInputs = document.querySelectorAll(".semester-hours-input");
-  hourInputs.forEach((input) => {
-    input.addEventListener("input", updateTotalHours);
-  });
-};
-function calculateTotalHours() {
-  const coreHoursInputs = document.querySelectorAll(
-    "#core-requirements .semester-hours-input"
-  );
-  const requiredHoursInputs = document.querySelectorAll(
-    "#required-courses .semester-hours-input"
-  );
-  const ancillaryHoursInputs = document.querySelectorAll(
-    "#ancilliary-requirements .semester-hours-input"
-  );
-  const electiveHoursInputs = document.querySelectorAll(
-    "#elective-courses .semester-hours-input"
-  );
+document.addEventListener('DOMContentLoaded', () => {
+    ['core', 'required', 'ancillary', 'elective'].forEach(section => {
+        fetchSectionData(section);
+    });
+});
 
-  let totalHours = 0;
+function fetchSectionData(section) {
+    const endpoint = `getChecklist.php?section=${section}`;
+    fetch(endpoint)
+    .then(response => response.json())
+    .then(data => {
+        const tableBody = document.querySelector(`#${section}-requirements .input-rows`);
+        tableBody.innerHTML = ''; // Clear existing rows
 
-  // Helper function to sum the values of number inputs
-  const sumInputValues = (inputs) => {
-    return Array.from(inputs).reduce((total, input) => {
-      return total + (parseInt(input.value) || 0);
-    }, 0);
-  };
+        // Populate table 
+        data.forEach(course => {
+            const row = tableBody.insertRow();
+            row.insertCell(0).textContent = course.course_name;
+            row.insertCell(1).textContent = course.course_description;
+            row.insertCell(2).textContent = course.semester_hours;
+        });
 
-  // Sum hours from all sections
-  totalHours += sumInputValues(coreHoursInputs);
-  totalHours += sumInputValues(requiredHoursInputs);
-  totalHours += sumInputValues(ancillaryHoursInputs);
-  totalHours += sumInputValues(electiveHoursInputs);
-
-  // Display the total hours
-  document.getElementById(
-    "all-sections-total-hours"
-  ).textContent = `${totalHours} out of 122`;
-
-  // Update total hours for each section (optional)
-  document.getElementById("core-total-hours").textContent =
-    sumInputValues(coreHoursInputs);
-  document.getElementById("required-total-hours").textContent =
-    sumInputValues(requiredHoursInputs);
-  document.getElementById("ancillary-total-hours").textContent =
-    sumInputValues(ancillaryHoursInputs);
-  document.getElementById("elective-total-hours").textContent =
-    sumInputValues(electiveHoursInputs);
+        const numberOfRowsToAdd = Math.max(5 - data.length, 1); // Ensure at least one empty row
+        for (let i = 0; i < numberOfRowsToAdd; i++) {
+            const row = tableBody.insertRow();
+            row.insertCell(0).innerHTML = '<input type="text" placeholder="course name" name="course_name[]">';
+            row.insertCell(1).innerHTML = '<input type="text" placeholder="course description" name="course_description[]">';
+            row.insertCell(2).innerHTML = '<input type="number" placeholder="s.h" name="semester_hours[]" class="semester-hours-input">';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
-// Event listener for the calculate button
-document
-  .getElementById("calculate-hours")
-  .addEventListener("click", calculateTotalHours);
+function fetchAndDisplayTotalHours(section) {
+    fetch(`getTotalHours.php?section=${section}`)
+        .then(response => response.json())
+        .then(data => {
+            const totalHoursElement = document.getElementById(`${section}-total-hours`);
+            if (totalHoursElement) {
+                totalHoursElement.textContent = data.totalSemesterHours;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = ['core', 'required', 'ancillary', 'elective'];
+    sections.forEach(section => {
+        fetchSectionData(section);  data
+        fetchAndDisplayTotalHours(section); // fetch and display total hours
+    });
+});
+
