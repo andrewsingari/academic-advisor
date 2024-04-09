@@ -1,31 +1,49 @@
-/* General Reset and Typography */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
-}
-
-body,
-html {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f9f9f9;
-  color: #090c55;
-  font-size: 16px;
 }
 
-/* Top Navigation */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  padding-top: 60px; /* Ensures content is not hidden behind the fixed navbar */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #090c55; /* Dark blue background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners for modern feel */
+  cursor: pointer; /* Cursor indicates clickable button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+}
+
+button:hover {
+  background-color: #eec78e; /* Light brown accent color for hover */
+  transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
+button:active {
+  transform: translateY(1px); /* Slight press effect on active/click */
+}
+
 .top-navigation {
   background-color: #090c55;
   color: #ffffff;
-  padding: 0.5em 2em;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .top-navigation .logo {
@@ -38,96 +56,120 @@ html {
 }
 
 .top-navigation .profile-picture {
-  height: 40px;
+  height: 50px;
   border-radius: 50%;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 .top-navigation a {
   color: #ffffff;
-  margin-left: 15px;
+  margin-left: 1rem;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .top-navigation a:hover {
-  color: #eec78e;
+  text-decoration: underline;
 }
 
-/* Main Header */
+/* Main Content Styles */
 h1 {
   color: #090c55;
   text-align: center;
-  padding: 20px;
-  margin-top: 80px; /* Push down below fixed navbar */
+  margin-top: 100px; /* Added space from the fixed navbar */
   font-size: 2.5em;
+  margin-bottom: 0.5em; /* Reduced for tighter design */
 }
 
 /* Form Styles */
 #listingForm {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 1000px; /* Adjusted width for desktop */
+  margin: 1em auto;
+  padding: 1em;
   background: #ffffff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #listingForm input[type="text"] {
-  width: calc(33% - 10px);
-  margin-right: 10px;
+  flex: 1;
+  margin: 0; /* Reset margin */
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #eee;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 0.5em; /* Spacing between inputs */
 }
 
 #listingForm button {
-  padding: 10px 20px;
-  background-color: #eec78e;
-  color: #090c55;
+  white-space: nowrap; /* Ensures button text stays on one line */
+  background-color: #090c55;
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-  font-size: 1em;
+  transition: background-color 0.3s;
+  padding: 10px 20px; /* Padding for button */
+  margin-left: 0.5em; /* Spacing after the last input field */
 }
 
 #listingForm button:hover {
-  background-color: #dda658;
+  background-color: #eec78e;
 }
 
 /* Listings Container */
 #listingsContainer {
   width: 80%;
-  margin: 20px auto;
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1em;
 }
 
 #listingsContainer div {
   background-color: #ffffff;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #listingsContainer h2 {
   color: #090c55;
-  margin-bottom: 5px;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
 }
 
 #listingsContainer p {
   color: #666;
-  margin-bottom: 5px;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+/* Listings Container */
+#listingsContainer div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Clear floats after the listings */
-#listingsContainer::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #listingForm {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-/* Add some breathing room at the bottom */
-body {
-  padding-bottom: 60px;
+  #listingForm input[type="text"],
+  #listingForm button {
+    width: 100%; /* Full width on smaller screens */
+    margin: 0.5em 0; /* Add some space between the form elements */
+  }
+
+  #listingForm button {
+    margin-left: 0; /* Reset left-margin for mobile */
+  }
+
+  #listingsContainer {
+    grid-template-columns: 1fr; /* Full width cards on smaller screens */
+  }
 }
