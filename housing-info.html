@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Housing Listings</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/housing.css" />
+  </head>
+  <body>
     <h1>Housing Listings</h1>
     <form id="listingForm" method="post" enctype="multipart/form-data">
-        <input type="text" id="title" name="title" placeholder="Title" required>
-        <input type="text" id="price" name="price" placeholder="Price" required>
-        <input type="text" id="address" name="address" placeholder="Address" required>
-        <input type="text" id="location" name="location" placeholder="Location" required>
-        <input type="text" id="username" name="username" placeholder="Username" required>
-        <button type="submit">Add Listing</button>
+      <input type="text" id="title" name="title" placeholder="Title" required />
+      <input type="text" id="price" name="price" placeholder="Price" required />
+      <input
+        type="text"
+        id="address"
+        name="address"
+        placeholder="Address"
+        required
+      />
+      <input
+        type="text"
+        id="location"
+        name="location"
+        placeholder="Location"
+        required
+      />
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <button type="submit">Add Listing</button>
     </form>
     <div id="listingsContainer"></div>
 
     <script src="js/housing.js"></script>
-</body>
+  </body>
 </html>
