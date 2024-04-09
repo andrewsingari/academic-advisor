@@ -1,39 +1,36 @@
-/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Apply a natural box layout model to all elements */
 html {
-  font-size: 16px; /* Set base font size to 16px */
+  font-size: 16px; 
 }
 section {
   margin: 0 auto; /* Center the sections */
   width: 100%; /* Make section take the full width of its container */
-  /* Other styles... */
 }
 body {
   font-family: "Arial", sans-serif;
   background-color: #f9f9f9;
-  padding-top: 70px; /* Space for fixed navigation bar */
+  padding-top: 70px;
   line-height: 1.6; /* Default line height for better readability */
   display: block; /* Set display to flex */
   justify-content: center; /* Center children horizontally */
   align-items: flex-start; /* Align children to the start of the cross axis */
-  min-height: 100vh; /* Minimum height of 100% of the viewport height */
-}
-/* You might also want to center the 'Total Semester Hours' paragraph */
-p {
-  text-align: center; /* Center align the text within the paragraph */
+  min-height: 100vh; 
 }
 
-/* Main container for the content to center it on the page */
+p {
+  text-align: center; 
+  font-size: 20px;
+}
+
 .container {
-  width: 100%; /* Full width of the viewport */
-  margin: 0 auto; /* Auto margins for horizontal centering */
-  padding: 2rem; /* Padding around the content */
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 2rem; 
 }
 
 /* Section styles for proper spacing and readability */
@@ -66,20 +63,20 @@ th {
 }
 h4 {
   padding: 20px;
-  color: #090c55; /* Dark blue for contrast and consistency */
-  background-color: transparent; /* No background for a title */
-  padding: 0; /* No padding needed for a title */
-  margin-top: 12px; /* No extra space needed on top for a title */
-  margin-bottom: 32px; /* More space at the bottom to separate from content */
-  text-align: left; /* Align to the left for a title */
-  border-radius: 0; /* No border radius for a title */
-  box-shadow: none; /* No box shadow for a title */
-  display: block; /* Let it take the full width */
-  width: 100%; /* Full width */
-  font-size: 2.5em; /* Much larger font size */
-  font-weight: bold; /* Make it bold */
-  line-height: 1.2; /* Tighter line spacing */
-  border-bottom: 2px solid #eec78e; /* A solid underline for distinction */
+  color: #090c55; 
+  background-color: transparent; 
+  padding: 0; 
+  margin-top: 12px; 
+  margin-bottom: 32px; 
+  text-align: left; 
+  border-radius: 0; 
+  box-shadow: none; 
+  display: block; 
+  width: 100%; 
+  font-size: 2.5em; 
+  font-weight: bold; 
+  line-height: 1.2; 
+  border-bottom: 2px solid #eec78e; 
 }
 /* Style for table data cells */
 td {
@@ -91,26 +88,23 @@ td {
 
 input[type="text"],
 input[type="number"] {
-  /* You can add max-width if the fields are too wide */
-  box-sizing: border-box; /* Include padding and border in the element's width */
-  width: 100%; /* Use the full width available */
+  box-sizing: border-box;  
+  width: 100%; 
   padding: 0.5rem;
-  margin-top: 0.25rem; /* Margin top for spacing from the label */
+  margin-top: 0.25rem; 
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   font-size: medium;
 }
 
-/* Hover effect for table rows for better user experience */
 tr:not(:first-child):hover {
   background-color: #f8f8f8;
 }
 
-/* Style for section headings */
 h2 {
   color: #090c55;
-  margin-bottom: 1rem; /* Spacing below the heading */
-  font-size: 1.25rem; /* Slightly larger font size for headings */
+  margin-bottom: 1rem; 
+  font-size: 1.25rem; 
 }
 
 /* Total semester hours display styling */
@@ -144,14 +138,14 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  position: fixed; /* Fix the navbar at the top */
+  position: fixed; 
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensures the navbar is above other content */
+  z-index: 1000;
 }
 
 .top-navigation .logo {
-  height: 50px; /* Adjust as per your logo's aspect ratio */
+  height: 50px; 
 }
 
 .top-navigation .nav-right {
