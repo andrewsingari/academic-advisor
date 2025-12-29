@@ -7,7 +7,7 @@ No installation required — open in your browser:
 [https://merrill.in/academic-advisor/index.html](https://merrill.in/academic-advisor/index.html)
 
 ## Demo Video
-Walkthrough video: [Watch the demo](docs/demo/demo.mov)
+Walkthrough: [Watch the demo](https://drive.google.com/file/d/1pPXIL7G22TOTr3zPu-vHv2Udy6feXBxF/view?usp=sharing)
 
 ## Key Features
 
@@ -19,7 +19,7 @@ Walkthrough video: [Watch the demo](docs/demo/demo.mov)
 ### Course Schedule (Timetable)
 - Add courses by entering a course name, choosing a time slot, and selecting days
 - Courses persist in the timetable until reset
-- Schedule data is stored so it remains when you return. 
+- Schedule data is stored so it remains when you return.
 
 ### Student Life
 **Housing**
